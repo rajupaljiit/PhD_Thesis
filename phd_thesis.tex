@@ -1,0 +1,305 @@
+
+\documentclass[oneside,12pt]{Classes/jiit-phd-thesis}
+\usepackage[top=3cm,left=2.5cm,right=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[centertags]{amsmath}
+\usepackage[chapter]{algorithm}
+\usepackage{algorithmic}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{tabu}
+\usepackage{mathtools}
+\usepackage[pdftex]{graphicx}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{placeins}
+\usepackage[center]{caption}
+\usepackage{rotating}
+ \usepackage{amsmath}
+\usepackage[export]{adjustbox}
+\usepackage{pdflscape}
+\makeatletter
+\let\c@lofdepth\relax
+\let\c@lotdepth\relax
+\makeatother
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage[outdir=./]{epstopdf}
+%%%------------------ Defining indentation in LoF/LoT ----------------------------
+\makeatletter
+\renewcommand*\l@figure{\@dottedtocline{1}{1.5em}{5.0em}}% Default: 1.5em/2.3em
+\addtocontents{lof}{\def\string\@dotsep{1000}}
+\addtocontents{lot}{\def\string\@dotsep{1000}}
+\let\l@table\l@figure
+\makeatother
+
+
+%------------------ Defining the contents of Title Page-------------------------------------
+\Title{Enhancement of Bag-of-Features Method for Classification of Histopathological Images}
+
+%------------------ Author ------------------------------------
+\Author{Raju Pal}
+\Roll{ENROLLMENT NO. 14403008}
+
+%------------------ Supervisors -------------------------------
+\SupervisorA{Dr. Mukesh Saraswat}
+\SupervisorB{}
+
+%------------------ Department --------------------------------
+\Department{Department of Computer Science Engineering and Information Technology}
+
+%------------------ Institute/University Name -----------------
+\Institute{JAYPEE INSTITUTE OF INFORMATION TECHNOLOGY}
+\InstituteTag{(Deemed to be University under Section 3 of UGC Act)}
+\InstituteAdd{a-10, seCTOR-62, NOIDA, INDIA}
+
+%------------------ Institute/University Logo -----------------
+\InstituteLogo{\includegraphics[scale=0.10]{JPlogo}}
+
+%------------------ Name of Degree ----------------------------
+\Degree{DOCTOR OF PHILOSOPHY}
+
+%------------------ Degree Completion -------------------------
+\StartDegreeDate{August 2014}
+
+%------------------ Degree Completion -------------------------
+\EndDegreeDate{June, 2019}
+
+%------------------ Spacing -----------------------------------
+ \linespread{1.5}
+
+%============ Begin Document ==============%
+\begin{document}
+
+%------------------ Title Page ----------------------------
+
+	%------------------ Adding Title and Page in TOC -----------
+\addtocontents{toc}{\textbf{}\hfill\textbf{\fontsize{12}{10}\selectfont Page Number}\par}
+
+	%------------------ Calling the Title Page ----------------------------
+\maketitle
+\addcontentsline{toc}{chapter}{\fontsize{12.5}{10}\selectfont{INNER FIRST PAGE}}
+\newpage
+
+%------------------ Copyright Page ----------------------------
+
+
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\textbf{}\\
+\begin{Large} 
+\centering
+\fontsize{10}{12}\selectfont{
+{\copyright \ Copyright  JAYPEE INSTITUTE OF INFORMATION TECHNOLOGY}\\
+{(Deemed to be University under Section 3 of UGC Act) }\\
+A-10, SECTOR-62, NOIDA, INDIA \\
+June, 2019\\
+ALL RIGHTS RESERVED\\
+}
+\end{Large}
+\newpage
+
+%------------------ Reseting Page Number ----------------------------
+\setcounter{page}{2}
+
+%------------------ Table of Contents ----------------------------
+\addcontentsline{toc}{chapter}{\fontsize{12}{10}\selectfont{TABLE OF CONTENTS}}
+ \renewcommand{\contentsname}{\hfill Table of Contents\hfill}
+\renewcommand{\cfttoctitlefont}{\fontsize{16}{10}\bfseries\MakeUppercase}
+ \tableofcontents
+\newpage
+
+%------------------ Scholar Declaration -----------------------------
+\addcontentsline{toc}{chapter}{\fontsize{12}{10}\selectfont{DECLARATION BY SCHOLAR}}
+\include{Declaration/declaration}
+\newpage
+
+%------------------ Blank Page ----------------------------
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+%------------------ Supervisor Declaration -----------------------------
+\addcontentsline{toc}{chapter}{\fontsize{12}{10}\selectfont{SUPERVISOR'S CERTIFICATE}}
+\include{SupDeclaration/Supdeclaration}
+\newpage
+
+%------------------ Blank Page ----------------------------
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+%------------------ Acknowledgement ----------------------------
+\addcontentsline{toc}{chapter}{\fontsize{12}{10}\selectfont{ACKNOWLEDGEMENT}}
+\include{Acknowledgement/acknowledgement}
+\newpage
+
+%------------------ Abstract ----------------------------
+\addcontentsline{toc}{chapter}{\fontsize{12}{10}\selectfont ABSTRACT}
+\include{Abstract/abstract}
+\newpage
+
+%------------------ Blank Page ----------------------------
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+%------------------ Nomenclatures --------------------------------
+\addcontentsline{toc}{chapter}{\fontsize{12}{10}\selectfont LIST OF ACRONYMS \& ABBREVIATIONS}
+\include{Nomenclatures/nomenclatures}
+\newpage
+
+%------------------ Blank Page ----------------------------
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+%------------------ List of Figure --------------------------------
+\addcontentsline{toc}{chapter}{\fontsize{12}{10}\selectfont LIST OF FIGURES}
+\renewcommand{\listfigurename}{\hfill List of Figures\hfill}
+\renewcommand{\cftloftitlefont}{\fontsize{16}{10}\bfseries\MakeUppercase}
+\addtocontents{lof}{{\textbf{Figure Number}}\hfill\textbf{Caption}\hfill\textbf{Page Number}\par}
+\listoffigures
+\newpage
+
+%------------------ Blank Page ----------------------------
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+%------------------ List of Tables ----------------------------
+\addcontentsline{toc}{chapter}{\fontsize{12}{10}\selectfont LIST OF TABLES}
+\renewcommand{\listtablename}{\hfill List of Tables\hfill}
+\renewcommand{\cftlottitlefont}{\fontsize{16}{10}\bfseries\MakeUppercase}
+\addtocontents{lot}{\textbf{Table Number}\hfill\textbf{Caption}\hfill\textbf{Page Number}\par}
+\listoftables
+\newpage
+
+%------------------ Blank Page ----------------------------
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+%------------------ Parameter Setting ----------------------------
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\frontmatter % book mode only
+\pagenumbering{roman}
+
+%%------------------ Main matter -----------------------------------
+
+\mainmatter % book mode only
+
+%%%%------------------ Chapter 1 ----------------------------
+\include{Chapter1/chapter1}
+\newpage
+%%%%%%%%------------------ Chapter 2 ----------------------------
+\include{Chapter2/chapter2}
+\newpage
+%%%%%%%%
+%------------------ Blank Page ----------------------------
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+%%%%%%%%------------------ Chapter 3 ----------------------------
+\include{Chapter3/chapter3}
+\newpage
+%%
+
+%------------------ Blank Page ----------------------------
+\thispagestyle{empty}
+\mbox{}
+\newpage
+%%%------------------ Chapter 4 ----------------------------
+\include{Chapter4/chapter4}
+\newpage
+%%
+%%
+
+%%%%%------------------ Chapter 5 ----------------------------
+\include{Chapter5/chapter5.2}
+\newpage
+%%%%%%%    
+%%%%%%% %%%------------------ Chapter 6 ----------------------------
+\include{Chapter6/chapter6.1}
+\newpage
+%%%%%%%
+
+\thispagestyle{empty}
+\mbox{}
+\newpage
+%%%%%%%%%%%%%------------------ Chapter 7 ----------------------------
+\include{Chapter7/chapter7.1}
+\newpage
+
+%------------------ Blank Page ----------------------------
+
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+%%%%%%%%%%%%------------------ Chapter  8----------------------------
+\include{Chapter8/chapter8}
+\newpage
+
+
+
+
+%------------------ References ----------------------------
+\addcontentsline{toc}{chapter}{\fontsize{12}{10}\selectfont REFERENCES}
+\bibliographystyle{jiitRef}
+\renewcommand{\bibname}{\fontsize{16}{16} \selectfont REFERENCES}
+\bibliography{References/Sref} % bibfile
+\newpage
+
+%------------------ Blank Page ----------------------------
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+%------------------ Publications ----------------------------
+\addcontentsline{toc}{chapter}{\fontsize{12}{10}\selectfont LIST OF PUBLICATIONS}
+\addtocontents{toc}{\protect\contentsline {chapter}{\fontsize{12}{10}\selectfont SYNOPSIS }{Synopsis-1}}
+\include{Author-Publications/publications}
+
+%------------------ Blank Page ----------------------------
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+\end{document}

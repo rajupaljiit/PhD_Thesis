@@ -1,0 +1,25 @@
+
+%--------------- Dedication ---------------%
+
+\begin{dedication} %this creates the heading for the dedication page
+\vspace*{3in}
+\begin{center}
+\LARGE
+$\mathcal Dedicated\ to$
+ 
+$\mathcal Lord\ Shri\ Banke\ Bihari\ Lal\ Ji,$
+ 
+$\mathcal My\ Father\ Shri\ Din\ Dayal\ Sharma,$
+
+$\mathcal My\ Mother\ Smt.\ Savitri\ Sharma,$
+
+$\mathcal My\ wife\ Bhawna$
+
+$\mathcal \ and$ 
+
+$\mathcal \ kids\ Vihan\ \&\ Deepika$
+
+\end{center}
+
+\end{dedication}
+
